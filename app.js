@@ -35,7 +35,7 @@ io.sockets.on('connection', function (socket) {
 		usernames[username] = username;
 		scores[socket.username] = 0;
 		pairCount++;
-		if (pairCount === 1) {
+		if (pairCount === 1 || pairCount >=3) {
 			id = Math.round((Math.random() * 1000000));
 			socket.room = id;
 			pairCount = 1;
